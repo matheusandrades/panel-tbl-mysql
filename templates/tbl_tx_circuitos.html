@@ -1,0 +1,75 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+	<a class="btn btn-primary" href="./edit_tbl_tx_circuitos/add/0">
+		<i class="glyphicon glyphicon-plus-sign"></i> Add New Tbl_Tx_Circuitos
+	</a>
+	<h1>Tbl Tx Circuitos</h1>
+	<p>This table includes {{table_count}} tbl_tx_circuitos</p>
+	<table id="sorted" class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th>Tipo Cliente</th>
+				<th>Status Link</th>
+				<th>Accid</th>
+				<th>Tipo Circuito</th>
+				<th>Camada Layer</th>
+				<th>Ip Uf</th>
+				<th>Ip Cidade</th>
+				<th>Ip Anf</th>
+				<th>Sigla Pop</th>
+				<th>Ip Trecho</th>
+				<th>Path</th>
+				<th>Ip Link</th>
+				<th>Via Id</th>
+				<th>Secao Optica W</th>
+				<th>Secao Optica P</th>
+				<th>Tipo Protecao</th>
+				<th>Meio Tx</th>
+				<th>Designacao Tx</th>
+				<th>Observacao Tx</th>
+				<th>Router A</th>
+				<th>Interface A</th>
+				<th>Router B</th>
+				<th>Interface B</th>
+				<th>Tx End Id Tx A</th>
+				<th>Tx Ne Site Id A</th>
+				<th>Shelf A</th>
+				<th>Slot A</th>
+				<th>Porta A</th>
+				<th>Tx End Id Tx B</th>
+				<th>Tx Ne Site Id B</th>
+				<th>Shelf B</th>
+				<th>Slot B</th>
+				<th>Porta B</th>
+				<th>Fibra Apagada End Id Bbip</th>
+				<th>Fibra Apagada End Id Tx</th>
+
+				<th>Edit</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for row_data in data %}
+			<tr>
+				{% for d in row_data %}
+					<td>{{d}}</td>
+				{% endfor %}
+				<td>
+					<a href="./edit_tbl_tx_circuitos/edit/{{row_data[0]}}">
+						<i class="glyphicon glyphicon-edit"></i>
+					</a>
+				</td>
+				<td>
+					<a 
+						href="./save?cat=tbl_tx_circuitos&act=delete&modifier=TIPO_CLIENTE&id={{row_data[0]}}"
+						onclick="return navConfirm(this.href);">
+					<i class="glyphicon glyphicon-trash"></i>
+					</a>
+					</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

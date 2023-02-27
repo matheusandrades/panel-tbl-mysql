@@ -1,0 +1,52 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+	<form method="post" action="{{ url_for('save') }}" enctype='multipart/form-data'>
+		<fieldset>
+			<legend class="hidden-first">Add New Tbl_Codigos_Cnl</legend>
+			<input name="cat" type="hidden" value='tbl_codigos_cnl'>
+			<input name="modifier" type="hidden" value='Codigo_CNL'>
+			<input name="id" type="hidden" value="{{data[0]}}">
+			<input name="act" type="hidden" value="{{act}}">
+		
+			<label>Codigo Cnl</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="Codigo_CNL"
+				value="{{data[0]}}" /><br>
+			<label>Uf</label>
+			<textarea 
+				class ="ckeditor 
+				form-control" 
+				name="UF">{{data[1]}}</textarea><br>
+			<label>Anf</label>
+			<textarea 
+				class ="ckeditor 
+				form-control" 
+				name="ANF">{{data[2]}}</textarea><br>
+			<label>Sigla Cnl</label>
+			<textarea 
+				class ="ckeditor 
+				form-control" 
+				name="Sigla_CNL">{{data[3]}}</textarea><br>
+			<label>Sigla Cnl Area Local</label>
+			<textarea 
+				class ="ckeditor 
+				form-control" 
+				name="Sigla_CNL_Area_Local">{{data[4]}}</textarea><br>
+			<label>Nome Da Localidade</label>
+			<textarea 
+				class ="ckeditor 
+				form-control" 
+				name="Nome_da_Localidade">{{data[5]}}</textarea><br>
+			<label>Nome Do Municipio</label>
+			<textarea 
+				class ="ckeditor 
+				form-control" 
+				name="Nome_do_Municipio">{{data[6]}}</textarea><br><br>
+			<input type="submit" value=" Save " class="btn btn-success">
+		</fieldset>
+	</form>
+{% endblock %}

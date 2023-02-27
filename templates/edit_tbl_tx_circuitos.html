@@ -1,0 +1,226 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+	<form method="post" action="{{ url_for('save') }}" enctype='multipart/form-data'>
+		<fieldset>
+			<legend class="hidden-first">Add New Tbl_Tx_Circuitos</legend>
+			<input name="cat" type="hidden" value='tbl_tx_circuitos'>
+			<input name="modifier" type="hidden" value='TIPO_CLIENTE'>
+			<input name="id" type="hidden" value="{{data[0]}}">
+			<input name="act" type="hidden" value="{{act}}">
+		
+			<label>Tipo Cliente</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="TIPO_CLIENTE"
+				value="{{data[0]}}" /><br>
+			<label>Status Link</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="STATUS_LINK"
+				value="{{data[1]}}" /><br>
+			<label>Accid</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="Accid"
+				value="{{data[2]}}" /><br>
+			<label>Tipo Circuito</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="tipo_circuito"
+				value="{{data[3]}}" /><br>
+			<label>Camada Layer</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="camada_layer"
+				value="{{data[4]}}" /><br>
+			<label>Ip Uf</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="IP_UF"
+				value="{{data[5]}}" /><br>
+			<label>Ip Cidade</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="IP_cidade"
+				value="{{data[6]}}" /><br>
+			<label>Ip Anf</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="IP_ANF"
+				value="{{data[7]}}" /><br>
+			<label>Sigla Pop</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="Sigla_POP"
+				value="{{data[8]}}" /><br>
+			<label>Ip Trecho</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="IP_Trecho"
+				value="{{data[9]}}" /><br>
+			<label>Path</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="Path"
+				value="{{data[10]}}" /><br>
+			<label>Ip Link</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="IP_LINK"
+				value="{{data[11]}}" /><br>
+			<label>Via Id</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="VIA_ID"
+				value="{{data[12]}}" /><br>
+			<label>Secao Optica W</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="SECAO_OPTICA_W"
+				value="{{data[13]}}" /><br>
+			<label>Secao Optica P</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="SECAO_OPTICA_P"
+				value="{{data[14]}}" /><br>
+			<label>Tipo Protecao</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="TIPO_PROTECAO"
+				value="{{data[15]}}" /><br>
+			<label>Meio Tx</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="MEIO_TX"
+				value="{{data[16]}}" /><br>
+			<label>Designacao Tx</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="DESIGNACAO_TX"
+				value="{{data[17]}}" /><br>
+			<label>Observacao Tx</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="OBSERVACAO_TX"
+				value="{{data[18]}}" /><br>
+			<label>Router A</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="ROUTER_A"
+				value="{{data[19]}}" /><br>
+			<label>Interface A</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="INTERFACE_A"
+				value="{{data[20]}}" /><br>
+			<label>Router B</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="ROUTER_B"
+				value="{{data[21]}}" /><br>
+			<label>Interface B</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="INTERFACE_B"
+				value="{{data[22]}}" /><br>
+			<label>Tx End Id Tx A</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="TX_END_ID_TX_A"
+				value="{{data[23]}}" /><br>
+			<label>Tx Ne Site Id A</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="TX_NE_SITE_ID_A"
+				value="{{data[24]}}" /><br>
+			<label>Shelf A</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="SHELF_A"
+				value="{{data[25]}}" /><br>
+			<label>Slot A</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="SLOT_A"
+				value="{{data[26]}}" /><br>
+			<label>Porta A</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="PORTA_A"
+				value="{{data[27]}}" /><br>
+			<label>Tx End Id Tx B</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="TX_END_ID_TX_B"
+				value="{{data[28]}}" /><br>
+			<label>Tx Ne Site Id B</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="TX_NE_SITE_ID_B"
+				value="{{data[29]}}" /><br>
+			<label>Shelf B</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="SHELF_B"
+				value="{{data[30]}}" /><br>
+			<label>Slot B</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="SLOT_B"
+				value="{{data[31]}}" /><br>
+			<label>Porta B</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="PORTA_B"
+				value="{{data[32]}}" /><br>
+			<label>Fibra Apagada End Id Bbip</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="Fibra_apagada_END_ID_BBIP"
+				value="{{data[33]}}" /><br>
+			<label>Fibra Apagada End Id Tx</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="Fibra_apagada_END_ID_TX"
+				value="{{data[34]}}" /><br><br>
+			<input type="submit" value=" Save " class="btn btn-success">
+		</fieldset>
+	</form>
+{% endblock %}
