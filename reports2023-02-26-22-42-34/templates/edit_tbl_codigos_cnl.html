@@ -1,0 +1,52 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+	<form method="post" action="{{ url_for('save') }}" enctype='multipart/form-data'>
+		<fieldset>
+			<legend class="hidden-first">Add New Tbl_Codigos_Cnl</legend>
+			<input name="cat" type="hidden" value='tbl_codigos_cnl'>
+			<input name="modifier" type="hidden" value='name'>
+			<input name="id" type="hidden" value="{{data[0]}}">
+			<input name="act" type="hidden" value="{{act}}">
+		
+			<label>Name</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="name"
+				value="{{data[0]}}" /><br>
+			<label>Owner</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="owner"
+				value="{{data[1]}}" /><br>
+			<label>Species</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="species"
+				value="{{data[2]}}" /><br>
+			<label>Sex</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="sex"
+				value="{{data[3]}}" /><br>
+			<label>Birth</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="birth"
+				value="{{data[4]}}" /><br>
+			<label>Death</label>
+			<input 
+				class="form-control" 
+				type="text" 
+				name="death"
+				value="{{data[5]}}" /><br><br>
+			<input type="submit" value=" Save " class="btn btn-success">
+		</fieldset>
+	</form>
+{% endblock %}
